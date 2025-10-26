@@ -1,233 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles/index.css" />
-    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
-    <title>Jay / Projects</title>
-    <script src="src/index.ts" type="module"></script>
-    <link rel="me" href="https://metalverse.social/@jay" />
-  </head>
-  <body>
-    <script>
-      (function () {
-        let theme = localStorage.getItem("theme") || "theme-bright";
-        document.body.classList.add(theme);
-      })();
-    </script>
-    <header>
-      <div class="inner-header">
-        <button
-          class="hamburger"
-          id="hamburger"
-          aria-label="toggle navigation"
-          aria-controls="sidebar"
-          aria-expanded="false"
-        >
-          <div class="hamburger__bar"></div>
-          <div class="hamburger__bar"></div>
-          <div class="hamburger__bar"></div>
-        </button>
-        <h1>Jay / Projects</h1>
-      </div>
-    </header>
 
-    <div class="navunderlay" aria-hidden="true" id="navunderlay"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./src/styles/index.css" />
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png" />
+  <title>Jay / Projects</title>
+  <script src="src/index.ts" type="module"></script>
+  <link rel="me" href="https://metalverse.social/@jay" />
+  <link rel="me" href="https://mastodon.social/@gillibrand" />
+</head>
 
-    <div class="sidebar-layout">
-      <aside class="sidebar" id="sidebar">
-        <nav>
-          <ul class="navmenu" id="navmenu" role="list">
-            <!-- JavaScript inserted -->
-          </ul>
+<body>
+  <script>
+    (function () {
+      let theme = localStorage.getItem("theme") || "theme-bright";
+      document.body.classList.add(theme);
+    })();
+  </script>
+  <header>
+    <div class="inner-header">
+      <button class="hamburger" id="hamburger" aria-label="toggle navigation" aria-controls="sidebar"
+        aria-expanded="false">
+        <div class="hamburger__bar"></div>
+        <div class="hamburger__bar"></div>
+        <div class="hamburger__bar"></div>
+      </button>
+      <h1>Jay / Projects</h1>
+    </div>
+  </header>
 
-          <label class="theme-button">
-            <img src="images/sun.svg" alt="" class="bright-only" />
-            <img src="images/sun-filled.svg" alt="" class="light-only" />
-            <img src="images/moon.svg" alt="" class="dark-only" />
-            Theme
-            <select id="theme-select">
-              <option value="theme-bright" selected>Bright</option>
-              <option value="theme-light">Light</option>
-              <option value="theme-dark">Dark</option>
-            </select>
-          </label>
-        </nav>
-      </aside>
+  <div class="navunderlay" aria-hidden="true" id="navunderlay"></div>
 
-      <main>
-        <section id="me">
-          <h1 data-alt="About Me" class="desktop">Jay / Projects</h1>
+  <div class="sidebar-layout">
+    <aside class="sidebar" id="sidebar">
+      <nav>
+        <ul class="navmenu" id="navmenu" role="list">
+          <!-- JavaScript inserted -->
+        </ul>
 
-          <img
-            src="images/jay-head.png"
-            srcset="images/jay-head.png 1x, images/jay-head@2x.png 2x"
-            alt="headshot of Jay"
-            class="float-right ms-4 mb-4 dark-hide"
-            width="100"
-            height="123"
-            id="jay-head"
-          />
+        <label class="theme-button">
+          <img src="images/sun.svg" alt="" class="bright-only" />
+          <img src="images/sun-filled.svg" alt="" class="light-only" />
+          <img src="images/moon.svg" alt="" class="dark-only" />
+          Theme
+          <select id="theme-select">
+            <option value="theme-bright" selected>Bright</option>
+            <option value="theme-light">Light</option>
+            <option value="theme-dark">Dark</option>
+          </select>
+        </label>
+      </nav>
+    </aside>
 
-          <img
-            src="images/jay-head-dark.png"
-            srcset="images/jay-head-dark.png 1x, images/jay-head-dark@2x.png 2x"
-            alt="headshot of Jay"
-            class="float-right ms-4 mb-4 dark-only"
-            width="100"
-            height="123"
-            id="jay-head-dark"
-          />
+    <main>
+      <section id="me">
+        <h1 data-alt="About Me" class="desktop">Jay / Projects</h1>
 
-          <p class="mobile-first-child">
-            Hi, I'm Jay Gillibrand, a software developer with extensive experience in both frontend and backend
-            development. I specialize in creating rich, accessible, and highly interactive user experiences. Here are a
-            few notable projects that showcase my work.
-          </p>
+        <img src="images/jay-head.png" srcset="images/jay-head.png 1x, images/jay-head@2x.png 2x" alt="headshot of Jay"
+          class="float-right ms-4 mb-4 dark-hide" width="100" height="123" id="jay-head" />
 
-          <dl class="skill-grid skill-grid--balanced">
-            <dt>Web</dt>
-            <dd>Extensive experience with rich web apps in React, TypeScript, Dojo, vanilla JavaScript</dd>
+        <img src="images/jay-head-dark.png" srcset="images/jay-head-dark.png 1x, images/jay-head-dark@2x.png 2x"
+          alt="headshot of Jay" class="float-right ms-4 mb-4 dark-only" width="100" height="123" id="jay-head-dark" />
 
-            <dt>Java</dt>
-            <dd>REST services, multithreading, client&#x2011;server apps, web apps, OSGi and Eclipse plugins</dd>
+        <p class="mobile-first-child">
+          Hi, I'm Jay Gillibrand, a software developer with extensive experience in both frontend and backend
+          development. I specialize in creating rich, accessible, and highly interactive user experiences. Here are a
+          few notable projects that showcase my work.
+        </p>
 
-            <dt>LinkedIn</dt>
-            <dd>
-              <a href="https://www.linkedin.com/in/jay-gillibrand/">https://www.linkedin.com/in/jay-gillibrand</a>
-            </dd>
+        <dl class="skill-grid skill-grid--balanced">
+          <dt>Web</dt>
+          <dd>Extensive experience with rich web apps in React, TypeScript, Dojo, vanilla JavaScript</dd>
 
-            <dt>GitHub</dt>
-            <dd>
-              <a href="https://github.com/gillibrand/">https://github.com/gillibrand</a>
-            </dd>
+          <dt>Java</dt>
+          <dd>REST services, multithreading, client&#x2011;server apps, web apps, OSGi and Eclipse plugins</dd>
 
-            <dt>Education</dt>
-            <dd>
-              University of California, Irvine <br />
-              BS in Computer Science
-            </dd>
-          </dl>
-        </section>
+          <dt>LinkedIn</dt>
+          <dd>
+            <a href="https://www.linkedin.com/in/jay-gillibrand/">https://www.linkedin.com/in/jay-gillibrand</a>
+          </dd>
 
-        <section id="keyframe-click">
-          <h2>Keyframe Click</h2>
+          <dt>GitHub</dt>
+          <dd>
+            <a href="https://github.com/gillibrand/">https://github.com/gillibrand</a>
+          </dd>
 
-          <p>
-            <a href="https://keyframe-click.vercel.app/">Keyframe Click</a> is a way to visually create CSS property
-            animations by placing Bézier curves on a timeline. I wrote this as a hybrid app: <strong>React</strong> for
-            navigation, layout, and custom controls. Vanilla-JavaScript for a high-performance, interactive
-            <code>&lt;canvas&gt;</code> timeline.
-          </p>
+          <dt>Education</dt>
+          <dd>
+            University of California, Irvine <br />
+            BS in Computer Science
+          </dd>
+        </dl>
+      </section>
 
-          <p>
-            <a href="https://keyframe-click.vercel.app/">Try it now</a> or
-            <a href="https://github.com/gillibrand/keyframe-click">view the source</a>.
-          </p>
+      <section id="keyframe-click">
+        <h2>Keyframe Click</h2>
 
-          <figure>
-            <button>
-              <img
-                class="photo"
-                src="images/kc-timeline-blue.png"
-                srcset="images/kc-timeline-blue.png 2x, images/kc-timeline-blue.png 1x"
-                alt="Keyframe Click web app adding a point to timeline"
-                width="828"
-                height="501"
-                loading="eager"
-              />
-            </button>
-            <figcaption>Editing a a CSS spring animation.</figcaption>
-          </figure>
-        </section>
+        <p>
+          <a href="https://keyframe-click.vercel.app/">Keyframe Click</a> is a way to visually create CSS property
+          animations by placing Bézier curves on a timeline. I wrote this as a hybrid app: <strong>React</strong> for
+          navigation, layout, and custom controls. Vanilla-JavaScript for a high-performance, interactive
+          <code>&lt;canvas&gt;</code> timeline.
+        </p>
 
-        <section id="gcm">
-          <h2 data-alt="Global CM">Global Configuration Management (GCM)</h2>
-          <p>
-            GCM manages versioned artifacts across apps in the
-            <a href="https://www.ibm.com/products/engineering-lifecycle-management"
-              >IBM Engineering Lifecycle Management</a
-            >
-            (ELM) suite. I wrote and maintained almost <strong>all of its web UI</strong>, many
-            <strong>REST services</strong>, and some of the <strong>Java backend services</strong>.
-          </p>
+        <p>
+          <a href="https://keyframe-click.vercel.app/">Try it now</a> or
+          <a href="https://github.com/gillibrand/keyframe-click">view the source</a>.
+        </p>
 
-          <p>
-            I developed the GCM tree component to support lazy-loading, fast renders, animated changes, keyboard
-            navigation, a11y, multi-select, drag-and-drop, and more.
-          </p>
+        <figure>
+          <button>
+            <img class="photo" src="images/kc-timeline-blue.png"
+              srcset="images/kc-timeline-blue.png 2x, images/kc-timeline-blue.png 1x"
+              alt="Keyframe Click web app adding a point to timeline" width="828" height="501" loading="eager" />
+          </button>
+          <figcaption>Editing a a CSS spring animation.</figcaption>
+        </figure>
+      </section>
 
-          <figure>
-            <button>
-              <img
-                class="photo"
-                src="images/gcm.png"
-                srcset="images/gcm@2x.png 2x, images/gcm.png 1x"
-                alt="GCM UI with open configuration tree"
-                width="1154"
-                height="720"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Editing a GCM tree containing streams from other apps.</figcaption>
-          </figure>
-        </section>
+      <section id="gcm">
+        <h2 data-alt="Global CM">Global Configuration Management (GCM)</h2>
+        <p>
+          GCM manages versioned artifacts across apps in the
+          <a href="https://www.ibm.com/products/engineering-lifecycle-management">IBM Engineering Lifecycle
+            Management</a>
+          (ELM) suite. I wrote and maintained almost <strong>all of its web UI</strong>, many
+          <strong>REST services</strong>, and some of the <strong>Java backend services</strong>.
+        </p>
 
-        <!-- GCM QUERY EDITOR -->
-        <section id="query-editor">
-          <h3>Query Builder</h3>
+        <p>
+          I developed the GCM tree component to support lazy-loading, fast renders, animated changes, keyboard
+          navigation, a11y, multi-select, drag-and-drop, and more.
+        </p>
 
-          <p>
-            I wrote the GCM <strong>query builder UI</strong>, plus the <strong>Java services</strong> to parse its
-            internal domain-specific query language and convert that to database queries. It can search based on various
-            attribute types and conditions, nest boolean conditions, and be edited with
-            <a href="/projects/video/GC-query-DnD.mp4">drag-and-drop as seen here</a>.
-          </p>
+        <figure>
+          <button>
+            <img class="photo" src="images/gcm.png" srcset="images/gcm@2x.png 2x, images/gcm.png 1x"
+              alt="GCM UI with open configuration tree" width="1154" height="720" loading="lazy" />
+          </button>
+          <figcaption>Editing a GCM tree containing streams from other apps.</figcaption>
+        </figure>
+      </section>
 
-          <figure>
-            <button>
-              <img
-                src="images/gc-query-editor.png"
-                class="photo"
-                width="2050"
-                height="1124"
-                alt="query editor"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>A query with nested OR conditions.</figcaption>
-          </figure>
-        </section>
+      <!-- GCM QUERY EDITOR -->
+      <section id="query-editor">
+        <h3>Query Builder</h3>
 
-        <!-- HISTORY VIEW -->
-        <section id="history-graph">
-          <h3>History on Canvas</h3>
+        <p>
+          I wrote the GCM <strong>query builder UI</strong>, plus the <strong>Java services</strong> to parse its
+          internal domain-specific query language and convert that to database queries. It can search based on various
+          attribute types and conditions, nest boolean conditions, and be edited with
+          <a href="/projects/video/GC-query-DnD.mp4">drag-and-drop as seen here</a>.
+        </p>
 
-          <p>
-            The GCM history <strong>history graph</strong> shows the different branches and baselines of a stream. I
-            used <code>&lt;canvas&gt;</code> to draw the connections. The optional mini-map in the bottom right can pan
-            around extensive graphs. There are several ways to collapse, filter, and navigate to accommodate thousands
-            of nodes.
-          </p>
+        <figure>
+          <button>
+            <img src="images/gc-query-editor.png" class="photo" width="2050" height="1124" alt="query editor"
+              loading="lazy" />
+          </button>
+          <figcaption>A query with nested OR conditions.</figcaption>
+        </figure>
+      </section>
 
-          <figure>
-            <button>
-              <img
-                src="images/history.png"
-                class="photo"
-                width="2300"
-                height="1028"
-                alt="history view"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Viewing changes since a baseline was created.</figcaption>
-          </figure>
-        </section>
+      <!-- HISTORY VIEW -->
+      <section id="history-graph">
+        <h3>History on Canvas</h3>
 
-        <!-- GC INBOX -->
-        <!-- <section id="gcm-inbox">
+        <p>
+          The GCM history <strong>history graph</strong> shows the different branches and baselines of a stream. I
+          used <code>&lt;canvas&gt;</code> to draw the connections. The optional mini-map in the bottom right can pan
+          around extensive graphs. There are several ways to collapse, filter, and navigate to accommodate thousands
+          of nodes.
+        </p>
+
+        <figure>
+          <button>
+            <img src="images/history.png" class="photo" width="2300" height="1028" alt="history view" loading="lazy" />
+          </button>
+          <figcaption>Viewing changes since a baseline was created.</figcaption>
+        </figure>
+      </section>
+
+      <!-- GC INBOX -->
+      <!-- <section id="gcm-inbox">
           <h3>Inbox Redesign</h3>
 
           <p>
@@ -251,337 +208,293 @@
           </figure>
         </section> -->
 
-        <section id="dng">
-          <h2>DOORS Next</h2>
-          <p>
-            <a href="https://www.ibm.com/products/requirements-management"> IBM DOORS Next</a> is a market leading
-            requirements management tool where I contributed many frontend and backend bug fixes and serviceability
-            improvements. I also had the opportunity to revamp its <strong>query builder</strong> component (aka,
-            filters).
-          </p>
-        </section>
+      <section id="dng">
+        <h2>DOORS Next</h2>
+        <p>
+          <a href="https://www.ibm.com/products/requirements-management"> IBM DOORS Next</a> is a market leading
+          requirements management tool where I contributed many frontend and backend bug fixes and serviceability
+          improvements. I also had the opportunity to revamp its <strong>query builder</strong> component (aka,
+          filters).
+        </p>
+      </section>
 
-        <!-- RM QUERY EDITOR -->
-        <section id="carbon-query-editor">
-          <h3>Carbon Query Builder</h3>
+      <!-- RM QUERY EDITOR -->
+      <section id="carbon-query-editor">
+        <h3>Carbon Query Builder</h3>
 
-          <p>
-            I revised the DOORS Next query builder to align it with the
-            <a href="https://carbondesignsystem.com/">IBM Carbon Design</a> guidelines, added support for nested AND/OR
-            groups, drag-and-drop reordering, and enhanced accessibility and usability.
-          </p>
+        <p>
+          I revised the DOORS Next query builder to align it with the
+          <a href="https://carbondesignsystem.com/">IBM Carbon Design</a> guidelines, added support for nested AND/OR
+          groups, drag-and-drop reordering, and enhanced accessibility and usability.
+        </p>
 
-          <figure class="stack">
-            <div class="compare compare--checked" id="rm-filters">
-              <img
-                src="images/rm-filters-old-alt.png"
-                alt="old DNG query builder"
-                loading="lazy"
-                width="1496"
-                height="846"
-              />
-              <img
-                src="images/rm-filters-new.png"
-                alt="new DNG query builder"
-                loading="lazy"
-                width="1496"
-                height="846"
-              />
-            </div>
-
-            <div class="text-center">
-              <label class="toggle" aria-label="show after image">
-                <span class="toggle__one" aria-hidden="true"> Before </span>
-                <span class="toggle__two" aria-hidden="true"> After </span>
-                <input class="toggle__checkbox" type="checkbox" checked data-compare="rm-filters" />
-              </label>
-            </div>
-          </figure>
-        </section>
-
-        <section id="inline-delete" class="clearfix">
-          <h3>Inline Delete</h3>
-
-          <div class="content-with-image">
-            <p>
-              The old design let you remove conditions with a single click. That was error-prone, so I added inline
-              "Remove" confirmations that still kept the speed of editing users expected. A tiny, fun detail that went
-              beyond the original requirements.
-            </p>
-
-            <div class="vidplayer stack text-center">
-              <div class="overlay">
-                <video
-                  class="vidplayer__video"
-                  preload="none"
-                  width="300"
-                  height="190"
-                  poster="images/confirm-delete-button.png"
-                >
-                  <source src="images/confirm-delete-button.mp4" type="video/mp4" />
-                  Video not supported
-                </video>
-                <img src="images/play-overlay.svg" class="vidplayer__overlay" />
-              </div>
-              <button class="vidplayer__button button mt-2">Play</button>
-            </div>
+        <figure class="stack">
+          <div class="compare compare--checked" id="rm-filters">
+            <img src="images/rm-filters-old-alt.png" alt="old DNG query builder" loading="lazy" width="1496"
+              height="846" />
+            <img src="images/rm-filters-new.png" alt="new DNG query builder" loading="lazy" width="1496" height="846" />
           </div>
-        </section>
 
-        <!-- JRS -->
-        <section id="jrs">
-          <h2>Report Builder</h2>
+          <div class="text-center">
+            <label class="toggle" aria-label="show after image">
+              <span class="toggle__one" aria-hidden="true"> Before </span>
+              <span class="toggle__two" aria-hidden="true"> After </span>
+              <input class="toggle__checkbox" type="checkbox" checked data-compare="rm-filters" />
+            </label>
+          </div>
+        </figure>
+      </section>
 
+      <section id="inline-delete" class="clearfix">
+        <h3>Inline Delete</h3>
+
+        <div class="content-with-image">
           <p>
-            <a
-              href="https://www.ibm.com/docs/en/engineering-lifecycle-management-suite/lifecycle-management/7.0.3?topic=service-jazz-reporting-components"
-            >
-              Report Builder</a
-            >
-            creates and runs reports across the
-            <a href="https://www.ibm.com/products/engineering-lifecycle-management">IBM ELM</a> suite. I bootstrapped
-            the project to replace its jQuery UI with a modern <strong>TypeScript/React</strong> UI. That included
-            initial project setup with <strong>ESBuild</strong> and <strong>rollup</strong>, writing some of its
-            <strong>core React components</strong>, and adding features like <strong>drag-and-drop</strong> to its
-            cross-product table component.
-          </p>
-
-          <figure>
-            <button>
-              <img
-                src="images/jrs-folder@2x.png"
-                class="photo"
-                width="1018"
-                height="510"
-                alt="report builder ui"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>Dragging reports into a folder in Report Builder.</figcaption>
-          </figure>
-        </section>
-
-        <section id="tags">
-          <h3>Bulk Tag Editor</h3>
-
-          <p>
-            I built a React tag editor component for Report Builder that needed a variation to modify multiple reports
-            at once. I worked closely with a UX designer on this version that uses menus, icons, and color to
-            effectively communicate all changes that will happen. Keyboard friendly.
+            The old design let you remove conditions with a single click. That was error-prone, so I added inline
+            "Remove" confirmations that still kept the speed of editing users expected. A tiny, fun detail that went
+            beyond the original requirements.
           </p>
 
           <div class="vidplayer stack text-center">
             <div class="overlay">
-              <video
-                class="vidplayer__video"
-                preload="none"
-                width="886"
-                height="550"
-                poster="images/jrs-poster.png.webp"
-              >
-                <source src="images/jrs-tags.mp4" type="video/mp4" />
+              <video class="vidplayer__video" preload="none" width="300" height="190"
+                poster="images/confirm-delete-button.png">
+                <source src="images/confirm-delete-button.mp4" type="video/mp4" />
                 Video not supported
               </video>
               <img src="images/play-overlay.svg" class="vidplayer__overlay" />
             </div>
             <button class="vidplayer__button button mt-2">Play</button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- SYNERGY -->
-        <section id="synergy">
-          <h2>Synergy / Change</h2>
-          <p>
-            <a href="https://www.ibm.com/products/rational-synergy">Rational Synergy</a> and
-            <a href="https://www.ibm.com/products/rational-change">Rational Change</a> are a closely related pair of
-            version control and defect tracking tools.
-          </p>
+      <!-- JRS -->
+      <section id="jrs">
+        <h2>Report Builder</h2>
 
-          <ul>
-            <li>Worked on the Synergy <strong>Java API</strong> from the new client to the legacy server.</li>
-            <li>Transitioned proprietary Change HTML widgets to <strong>Dojo widgets</strong>.</li>
-            <li>Wrote a robust <strong>Java sync service</strong> to mirror Change artifacts between databases.</li>
-          </ul>
-        </section>
+        <p>
+          <a
+            href="https://www.ibm.com/docs/en/engineering-lifecycle-management-suite/lifecycle-management/7.0.3?topic=service-jazz-reporting-components">
+            Report Builder</a>
+          creates and runs reports across the
+          <a href="https://www.ibm.com/products/engineering-lifecycle-management">IBM ELM</a> suite. I bootstrapped
+          the project to replace its jQuery UI with a modern <strong>TypeScript/React</strong> UI. That included
+          initial project setup with <strong>ESBuild</strong> and <strong>rollup</strong>, writing some of its
+          <strong>core React components</strong>, and adding features like <strong>drag-and-drop</strong> to its
+          cross-product table component.
+        </p>
 
-        <!-- COURSE CLEAR web component -->
-        <section id="course-clear">
-          <h1 data-alt="Course Clear WC">Course Clear Web Component</h1>
+        <figure>
+          <button>
+            <img src="images/jrs-folder@2x.png" class="photo" width="1018" height="510" alt="report builder ui"
+              loading="lazy" />
+          </button>
+          <figcaption>Dragging reports into a folder in Report Builder.</figcaption>
+        </figure>
+      </section>
 
-          <!-- must load as none to avoid content flash. Removed once the JavaScript is loaded (since not open is hidden anyway) -->
-          <course-clear id="cc-dialog" close-on-esc close-on-outside style="display: none">
-            <div class="Details">
-              <div class="Details__sidebar">
-                <button class="Details-star-button" data-cc-replay="true" id="cc-replay-button" autofocus>
-                  <span>↺</span>
-                  <span>Replay</span>
+      <section id="tags">
+        <h3>Bulk Tag Editor</h3>
+
+        <p>
+          I built a React tag editor component for Report Builder that needed a variation to modify multiple reports
+          at once. I worked closely with a UX designer on this version that uses menus, icons, and color to
+          effectively communicate all changes that will happen. Keyboard friendly.
+        </p>
+
+        <div class="vidplayer stack text-center">
+          <div class="overlay">
+            <video class="vidplayer__video" preload="none" width="886" height="550" poster="images/jrs-poster.png.webp">
+              <source src="images/jrs-tags.mp4" type="video/mp4" />
+              Video not supported
+            </video>
+            <img src="images/play-overlay.svg" class="vidplayer__overlay" />
+          </div>
+          <button class="vidplayer__button button mt-2">Play</button>
+        </div>
+      </section>
+
+      <!-- SYNERGY -->
+      <section id="synergy">
+        <h2>Synergy / Change</h2>
+        <p>
+          <a href="https://www.ibm.com/products/rational-synergy">Rational Synergy</a> and
+          <a href="https://www.ibm.com/products/rational-change">Rational Change</a> are a closely related pair of
+          version control and defect tracking tools.
+        </p>
+
+        <ul>
+          <li>Worked on the Synergy <strong>Java API</strong> from the new client to the legacy server.</li>
+          <li>Transitioned proprietary Change HTML widgets to <strong>Dojo widgets</strong>.</li>
+          <li>Wrote a robust <strong>Java sync service</strong> to mirror Change artifacts between databases.</li>
+        </ul>
+      </section>
+
+      <!-- COURSE CLEAR web component -->
+      <section id="course-clear">
+        <h1 data-alt="Course Clear WC">Course Clear Web Component</h1>
+
+        <!-- must load as none to avoid content flash. Removed once the JavaScript is loaded (since not open is hidden anyway) -->
+        <course-clear id="cc-dialog" close-on-esc close-on-outside style="display: none">
+          <div class="Details">
+            <div class="Details__sidebar">
+              <button class="Details-star-button" data-cc-replay="true" id="cc-replay-button" autofocus>
+                <span>↺</span>
+                <span>Replay</span>
+              </button>
+            </div>
+
+            <div class="Details_main">
+              <p>Hi, I'm Jay. Thanks for visiting.</p>
+              <p>
+                This dialog is a demo of my video game-inspired Course Clear web component.
+
+                <a href="#course-clear">Try it out below</a> or check out my other projects.
+              </p>
+
+              <div class="Details__buttons">
+                <button class="Details-button" id="cc-close-button">
+                  Go to <span style="white-space: nowrap"> My Projects →</span>
                 </button>
               </div>
-
-              <div class="Details_main">
-                <p>Hi, I'm Jay. Thanks for visiting.</p>
-                <p>
-                  This dialog is a demo of my video game-inspired Course Clear web component.
-
-                  <a href="#course-clear">Try it out below</a> or check out my other projects.
-                </p>
-
-                <div class="Details__buttons">
-                  <button class="Details-button" id="cc-close-button">
-                    Go to <span style="white-space: nowrap"> My Projects →</span>
-                  </button>
-                </div>
-              </div>
             </div>
-          </course-clear>
-
-          <p>
-            A web component dialog that stylishly animates in. Inspired by Super Mario Maker. No dependencies.
-            <a href="https://www.npmjs.com/package/course-clear">Available on npm</a>. Try it out below.
-          </p>
-
-          <p>
-            To get a smooth animation curve, I also created a quick-and-dirty
-            <a href="https://github.com/gillibrand/keyframe-gen/">keyframe generator</a>.
-          </p>
-
-          <div class="small-stack">
-            <span class="label" id="colors-label">Background <span class="sr-only">color</span></span>
-
-            <div class="color-group" aria-labelledby="colors-label" role="radiogroup">
-              <label class="color-radio color-radio--blue">
-                <span class="sr-only">blue</span>
-                <input type="radio" name="color" value="--mario-blue" checked />
-              </label>
-
-              <label class="color-radio color-radio--green">
-                <span class="sr-only">green</span>
-                <input type="radio" name="color" value="--mario-green" />
-              </label>
-              <label class="color-radio color-radio--red">
-                <span class="sr-only">red</span>
-                <input type="radio" name="color" value="--mario-red" />
-              </label>
-
-              <label class="color-radio color-radio--yellow">
-                <span class="sr-only">yellow</span>
-                <input type="radio" name="color" value="--mario-yellow" data-color="black" />
-              </label>
-            </div>
-
-            <label for="cc-greeting"> Your message</label>
-            <form class="mini-form" id="cc-form">
-              <input type="text" class="text-input" id="cc-greeting" spellcheck="false" />
-              <button class="button">Try it</button>
-            </form>
           </div>
-        </section>
+        </course-clear>
 
-        <!-- PLAYDATE -->
-        <section id="pixgrid">
-          <h2>Pix Grid for Playdate</h2>
+        <p>
+          A web component dialog that stylishly animates in. Inspired by Super Mario Maker. No dependencies.
+          <a href="https://www.npmjs.com/package/course-clear">Available on npm</a>. Try it out below.
+        </p>
 
-          <p>
-            A pixel art app for <a href="https://play.date">Playdate</a>. Written in Lua. Available on
-            <a href="https://github.com/gillibrand/playdate-pixel-grid">GitHub</a>.
-          </p>
+        <p>
+          To get a smooth animation curve, I also created a quick-and-dirty
+          <a href="https://github.com/gillibrand/keyframe-gen/">keyframe generator</a>.
+        </p>
 
-          <figure>
-            <button>
-              <img
-                class="photo"
-                src="images/pixgrid.jpg"
-                alt="pixgrid playdate app"
-                srcset="images/pixgrid@2x.jpg 2x, images/pixgrid.jpg 1x"
-                width="756"
-                height="671"
-                loading="lazy"
-              />
-            </button>
-            <figcaption>A stern bunny drawn in Pix Grid.</figcaption>
-          </figure>
-        </section>
+        <div class="small-stack">
+          <span class="label" id="colors-label">Background <span class="sr-only">color</span></span>
 
-        <!-- URL CLOWN -->
-        <section id="url-clown">
-          <h2>URL Clown for Chrome</h2>
-          <p>
-            A Chrome extension for editing URLs. I needed this for work and existing extensions didn't handle hash
-            parameter key-value pairs. Available on
-            <a href="https://chromewebstore.google.com/detail/url-clown/alcebgboodppnkoioknieomnkoknjhnf"
-              >Chrome Web Store</a
-            >
-            and
-            <a href="https://github.com/gillibrand/url-clown">Github</a>.
-          </p>
+          <div class="color-group" aria-labelledby="colors-label" role="radiogroup">
+            <label class="color-radio color-radio--blue">
+              <span class="sr-only">blue</span>
+              <input type="radio" name="color" value="--mario-blue" checked />
+            </label>
 
-          <figure>
-            <button>
-              <img
-                class="photo"
-                alt="URL Clown extension popup"
-                src="images/url-clown.jpg"
-                srcset="images/url-clown@2x.jpg 2x, images/url-clown.jpg 1x"
-                loading="lazy"
-                width="906"
-                height="522"
-              />
-            </button>
-            <figcaption>URL Clown handling encoded hash parameters.</figcaption>
-          </figure>
-        </section>
+            <label class="color-radio color-radio--green">
+              <span class="sr-only">green</span>
+              <input type="radio" name="color" value="--mario-green" />
+            </label>
+            <label class="color-radio color-radio--red">
+              <span class="sr-only">red</span>
+              <input type="radio" name="color" value="--mario-red" />
+            </label>
 
-        <section id="sublime">
-          <h2>Sublime Text Plugins</h2>
-          <p>Before there was VS Code, there was Sublime Text. Here are a few Python-based plugins I made.</p>
+            <label class="color-radio color-radio--yellow">
+              <span class="sr-only">yellow</span>
+              <input type="radio" name="color" value="--mario-yellow" data-color="black" />
+            </label>
+          </div>
 
-          <dl class="skill-grid">
-            <dt>
-              <a href="https://github.com/gillibrand/expand-selection-to-function-js">Expand Selection</a>
-            </dt>
-            <dd>A command to expand the text selection to outer JavaScript functions.</dd>
+          <label for="cc-greeting"> Your message</label>
+          <form class="mini-form" id="cc-form">
+            <input type="text" class="text-input" id="cc-greeting" spellcheck="false" />
+            <button class="button">Try it</button>
+          </form>
+        </div>
+      </section>
 
-            <dt>
-              <a href="https://github.com/gillibrand/MakeBookmarklet">Make Bookmarklet</a>
-            </dt>
-            <dd>Converts the JavaScript text of a file into a single line <code>javascript:</code> URL bookmarklet.</dd>
+      <!-- PLAYDATE -->
+      <section id="pixgrid">
+        <h2>Pix Grid for Playdate</h2>
 
-            <dt>
-              <a href="https://github.com/gillibrand/sublimetext-dojo-modules">Dojo Modules</a>
-            </dt>
-            <dd>Lists discovered Dojo modules and inserts their fully qualified names as module imports.</dd>
-          </dl>
-        </section>
+        <p>
+          A pixel art app for <a href="https://play.date">Playdate</a>. Written in Lua. Available on
+          <a href="https://github.com/gillibrand/playdate-pixel-grid">GitHub</a>.
+        </p>
 
-        <section id="mac">
-          <h2>Mac Plugins</h2>
-          <p>A few plugins for Mac software.</p>
+        <figure>
+          <button>
+            <img class="photo" src="images/pixgrid.jpg" alt="pixgrid playdate app"
+              srcset="images/pixgrid@2x.jpg 2x, images/pixgrid.jpg 1x" width="756" height="671" loading="lazy" />
+          </button>
+          <figcaption>A stern bunny drawn in Pix Grid.</figcaption>
+        </figure>
+      </section>
 
-          <dl class="skill-grid">
-            <dt><a href="https://github.com/gillibrand/alfred-change-case">Change Case</a></dt>
-            <dd>An <a href="https://www.alfredapp.com/">Alfred</a> plugin to change text case.</dd>
+      <!-- URL CLOWN -->
+      <section id="url-clown">
+        <h2>URL Clown for Chrome</h2>
+        <p>
+          A Chrome extension for editing URLs. I needed this for work and existing extensions didn't handle hash
+          parameter key-value pairs. Available on
+          <a href="https://chromewebstore.google.com/detail/url-clown/alcebgboodppnkoioknieomnkoknjhnf">Chrome Web
+            Store</a>
+          and
+          <a href="https://github.com/gillibrand/url-clown">Github</a>.
+        </p>
 
-            <dt>
-              <a href="https://github.com/gillibrand/launchbar-pinboard">Pinboard</a>
-            </dt>
-            <dd>
-              A <a href="https://www.obdev.at/products/launchbar">LaunchBar</a> plugin to access
-              <a href="https://pinboard.in">Pinboard</a> bookmarks.
-            </dd>
+        <figure>
+          <button>
+            <img class="photo" alt="URL Clown extension popup" src="images/url-clown.jpg"
+              srcset="images/url-clown@2x.jpg 2x, images/url-clown.jpg 1x" loading="lazy" width="906" height="522" />
+          </button>
+          <figcaption>URL Clown handling encoded hash parameters.</figcaption>
+        </figure>
+      </section>
 
-            <dt>
-              <a href="https://github.com/gillibrand/keyboardmaestro-cycle-window-sizes">Cycle Window Sizes</a>
-            </dt>
-            <dd>
-              A <a href="https://www.keyboardmaestro.com">Keyboard Maestro</a> library to cycle through window sizes.
-            </dd>
-          </dl>
-        </section>
-      </main>
-    </div>
+      <section id="sublime">
+        <h2>Sublime Text Plugins</h2>
+        <p>Before there was VS Code, there was Sublime Text. Here are a few Python-based plugins I made.</p>
 
-    <footer>
-      <div class="footer-content" id="footer-content"><span>Designed and Built / Jay Gillibrand</span></div>
-    </footer>
-  </body>
+        <dl class="skill-grid">
+          <dt>
+            <a href="https://github.com/gillibrand/expand-selection-to-function-js">Expand Selection</a>
+          </dt>
+          <dd>A command to expand the text selection to outer JavaScript functions.</dd>
+
+          <dt>
+            <a href="https://github.com/gillibrand/MakeBookmarklet">Make Bookmarklet</a>
+          </dt>
+          <dd>Converts the JavaScript text of a file into a single line <code>javascript:</code> URL bookmarklet.</dd>
+
+          <dt>
+            <a href="https://github.com/gillibrand/sublimetext-dojo-modules">Dojo Modules</a>
+          </dt>
+          <dd>Lists discovered Dojo modules and inserts their fully qualified names as module imports.</dd>
+        </dl>
+      </section>
+
+      <section id="mac">
+        <h2>Mac Plugins</h2>
+        <p>A few plugins for Mac software.</p>
+
+        <dl class="skill-grid">
+          <dt><a href="https://github.com/gillibrand/alfred-change-case">Change Case</a></dt>
+          <dd>An <a href="https://www.alfredapp.com/">Alfred</a> plugin to change text case.</dd>
+
+          <dt>
+            <a href="https://github.com/gillibrand/launchbar-pinboard">Pinboard</a>
+          </dt>
+          <dd>
+            A <a href="https://www.obdev.at/products/launchbar">LaunchBar</a> plugin to access
+            <a href="https://pinboard.in">Pinboard</a> bookmarks.
+          </dd>
+
+          <dt>
+            <a href="https://github.com/gillibrand/keyboardmaestro-cycle-window-sizes">Cycle Window Sizes</a>
+          </dt>
+          <dd>
+            A <a href="https://www.keyboardmaestro.com">Keyboard Maestro</a> library to cycle through window sizes.
+          </dd>
+        </dl>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-content" id="footer-content"><span>Designed and Built / Jay Gillibrand</span></div>
+  </footer>
+</body>
+
 </html>
