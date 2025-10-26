@@ -1,0 +1,132 @@
+.button {
+  padding: 0.25rem 1rem;
+  border-radius: 999px;
+  appearance: none;
+  color: white;
+  background: var(--button-bg);
+  font-size: 1rem;
+  border: none;
+  min-width: 5rem;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 5rem;
+
+  /* outline-offset: 1px; */
+  outline-width: 3px;
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+
+  &:active {
+    background-color: var(--button-bg-active);
+  }
+}
+
+.text-input {
+  border-radius: 0;
+  background-color: rgba(255 255 255 / 0.8);
+  border: solid 2px var(--border-color);
+  padding: 0.1255rem 0.25rem;
+
+  &:focus {
+    border-color: black;
+    outline-width: 1px;
+  }
+}
+
+.mini-form {
+  display: grid;
+  grid-template-columns: 40ch min-content;
+  gap: 1rem;
+  align-items: stretch;
+
+  @media (width <= 768px) {
+    grid-template-columns: auto min-content;
+  }
+}
+
+.photo,
+.vidplayer__video,
+.compare {
+  border: solid 10px white;
+  box-shadow: 3px 3px 10px var(--shadow-color);
+  box-shadow: var(--photo-shadow);
+  user-select: none;
+  -webkit-user-select: none;
+  position: relative;
+}
+
+button:has(> .photo) {
+  appearance: none;
+  padding: 0;
+  border: none;
+  outline-offset: 1px;
+  background-color: white;
+}
+
+.photo {
+  cursor: zoom-in;
+}
+
+.vidplayer__overlay {
+  pointer-events: none;
+  z-index: 1;
+}
+
+.vidplayer__video {
+  cursor: pointer;
+  background-color: white;
+}
+
+.vidplayer__button {
+  min-width: 6.5rem;
+  justify-content: center;
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.skill-grid {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+
+  dt,
+  dd {
+    margin: 0;
+  }
+
+  dt {
+    font-weight: bold;
+  }
+
+  @media (width > 768px) {
+    gap: 0.5rem 3rem;
+  }
+}
+
+.skill-grid--balanced {
+  dd {
+    text-wrap: balance;
+    max-width: 33rem;
+  }
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.75em;
+  gap: 0.5rem;
+  font-family: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono", "Roboto Mono", "Oxygen Mono",
+    "Ubuntu Mono", "Source Code Pro", "Fira Mono", "Droid Sans Mono", "Consolas", "Courier New", monospace;
+
+  & > * {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
+    padding: 0.125rem 0.75rem;
+    text-align: center;
+    white-space: nowrap;
+  }
+}

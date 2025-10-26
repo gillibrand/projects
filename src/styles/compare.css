@@ -1,0 +1,125 @@
+.compare {
+  display: grid;
+  overflow: hidden;
+  background-color: white;
+  cursor: pointer;
+
+  & > * {
+    position: relative;
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+
+    transition: all ease 200ms;
+    @media (prefers-reduced-motion) {
+      transition: none;
+    }
+
+    &:first-child {
+      /* z-index: 1; */
+      transform: translateX(0);
+    }
+
+    &:last-child {
+      opacity: 0;
+      transform: translateX(10rem);
+    }
+  }
+}
+
+.compare--checked {
+  & > :first-child {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  & > :last-child {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.toggle {
+  --gap: 0.25rem;
+  user-select: none;
+
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+
+  cursor: pointer;
+
+  border-radius: 999px;
+  background-color: var(--button-bg);
+  border: solid 4px var(--button-bg);
+
+  font-size: 0.875rem;
+
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+
+  * {
+    grid-row: 1 / 1;
+  }
+
+  .toggle__one,
+  .toggle__checkbox {
+    grid-column: 1 / 1;
+  }
+
+  .toggle__two {
+    grid-column: 2 / 2;
+  }
+
+  .toggle__one,
+  .toggle__two,
+  .toggle__checkbox {
+    padding: 0.25rem 1rem;
+    border-radius: 999px;
+  }
+
+  .toggle__one,
+  .toggle__two {
+    user-select: none;
+    color: #fffaee;
+    color: white;
+
+    text-align: center;
+    z-index: 1;
+
+    transition: color ease 200ms;
+  }
+
+  &:not(:has(:checked)) {
+    .toggle__one {
+      color: black;
+    }
+  }
+
+  &:has(:checked) {
+    .toggle__two {
+      color: black;
+    }
+  }
+
+  &:focus-within:has(:focus-visible) {
+    outline: solid 2px black;
+  }
+
+  .toggle__checkbox {
+    appearance: none;
+    background-color: var(--button-bg-light);
+    display: block;
+    pointer-events: none;
+    transition: transform ease 200ms;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+
+    &:checked {
+      transform: translateX(calc(100% + var(--gap)));
+    }
+  }
+}

@@ -1,0 +1,128 @@
+:root {
+  --scroll-spacer: 0px;
+
+  --yellow: #ffc53e;
+  --light-yellow: #fede96;
+  --mustard-yellow: #cc9d33;
+  --dark-gray: #252323;
+
+  --bg-color: var(--yellow);
+  --body-gradient: radial-gradient(#f9cf6c, var(--yellow));
+
+  --text-color: black;
+  --text-color-light: #664f1b;
+  --heading-color: black;
+
+  --border-color: var(--mustard-yellow);
+
+  --button-bg: #7d6739;
+  --button-bg-hover: #a5894d;
+  --button-bg-active: #bd9e5c;
+  --button-bg-light: var(--light-yellow);
+
+  --dash-color: #a5894d;
+
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --photo-shadow: 3px 3px 15px var(--shadow-color);
+
+  --nav-hover: #fcd57b;
+  --nav-selected: #fedf9c;
+  --nav-selected-text-color: black;
+
+  --hamburger-bg: black;
+
+  --z-header: 300;
+  --z-sidebar: 200;
+  --z-navunderlay: 100;
+
+  --mario-red: #e60013;
+  --mario-green: #11b14c;
+  --mario-blue: #059fdb;
+  --mario-yellow: #ffd100;
+
+  --cc-custom-color: white;
+}
+
+body.theme-light {
+  --bg-color: white;
+  --bg-color: #f9f9f9;
+  --body-gradient: none;
+  --blue: #286de3;
+  --border-color: #d6d6d6;
+  --heading-color: #333;
+
+  --nav-hover: #e4e4e4;
+
+  --nav-selected: var(--blue);
+  --nav-selected-text-color: white;
+
+  .navmenu__entry {
+    &:active {
+      color: var(--nav-selected-text-color);
+    }
+  }
+
+  .navmenu__entry::before {
+    display: none;
+  }
+
+  .navmenu__entry::after {
+    border-radius: 999px;
+    display: none;
+  }
+
+  --button-bg: var(--blue);
+  --button-bg-light: white;
+  --button-bg-hover: #439af7;
+  --button-bg-active: #268cfa;
+
+  --photo-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+body.theme-dark {
+  --bg-color: #3c3c3c;
+  --text-color: #bbb;
+  --text-color-light: #999;
+  --body-gradient: none;
+  --blue: #3b6cdb;
+  --border-color: #d6d6d6;
+  --heading-color: #d6d6d6;
+
+  --nav-hover: #4d4d4d;
+
+  --nav-selected: var(--blue);
+  --nav-selected-text-color: white;
+
+  .navmenu__entry {
+    &:active {
+      color: var(--nav-selected-text-color);
+    }
+  }
+
+  .navmenu__entry::before {
+    display: none;
+  }
+
+  .navmenu__entry::after {
+    border-radius: 999px;
+    display: none;
+  }
+
+  --button-bg: var(--blue);
+  --button-bg-light: white;
+  --button-bg-hover: #439af7;
+  --button-bg-active: #268cfa;
+
+  --photo-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.25);
+
+  --hamburger-bg: var(--border-color);
+
+  label,
+  .label {
+    color: #d6d6d6;
+  }
+
+  #jay-head-dark {
+    filter: drop-shadow(3px 5px 10px rgba(0, 0, 0, 0.75));
+  }
+}

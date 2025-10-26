@@ -1,0 +1,54 @@
+/* Only show in wide/desktop size. We actually make it invisible instead of none so that
+intersection observers still see it. */
+.desktop {
+  @media (width <= 768px) {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+/* In mobile view we hide some elements. Logically this marks the first, non-hidden first child. We
+need to turn off top-margin since it's not really after anything visual. */
+.mobile-first-child {
+  @media (width <= 768px) {
+    margin-block-start: 0;
+  }
+}
+
+.float-right {
+  float: right;
+}
+
+.ms-4 {
+  margin-inline-start: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

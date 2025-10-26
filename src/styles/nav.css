@@ -1,0 +1,253 @@
+header {
+  background-color: var(--bg-color);
+  position: fixed;
+  will-change: transform;
+  top: 0;
+  inset-inline: 0;
+
+  html.modal-open & {
+    inset-inline-end: var(--scrollbar-width);
+  }
+
+  min-height: 3.5rem;
+  z-index: var(--z-header);
+  padding: 0 1rem;
+
+  .inner-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    border-bottom: solid 4px var(--border-color);
+  }
+
+  .nav-open & {
+    padding-inline-end: 0;
+
+    .inner-header {
+      padding-inline-end: 1rem;
+    }
+  }
+
+  h1 {
+    border: none;
+    margin: 0;
+  }
+
+  @media (width > 768px) {
+    display: none;
+  }
+}
+
+.sidebar {
+  nav {
+    position: fixed;
+    top: 2rem;
+    bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  max-height: 100dvh;
+  overflow: auto;
+
+  @media (width <= 768px) {
+    position: fixed;
+    top: 3.5rem;
+    left: 0rem;
+    padding: 2rem 2rem 1rem 2rem;
+    bottom: 0;
+    background-color: var(--bg-color);
+    z-index: var(--z-sidebar);
+
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    display: none;
+    will-change: transform;
+
+    body.nav-open & {
+      transform: translateX(0);
+      display: block;
+    }
+
+    nav {
+      position: static;
+      min-height: 100%;
+    }
+  }
+}
+
+.hamburger {
+  width: 2rem;
+  height: 1.5rem;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: solid 4px var(--border-color);
+    outline-offset: 4px;
+  }
+}
+
+.hamburger__bar {
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--hamburger-bg);
+  transition: transform ease 200ms, opacity ease 200ms;
+
+  body.nav-open & {
+    &:first-child {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    &:last-child {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+
+    &:nth-child(2) {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+  }
+}
+
+.navmenu {
+  margin: 0;
+  /* margin-block-end: 1rem; */
+  position: relative;
+
+  /* work around for very short screens but are not in mobile layout yet. Ensure the sidebar font is
+  small enough to not need to scroll. Scrolling is better, but I noticed this late.
+  TODO: add scrolling support to floating, non-mobile sidebar.*/
+  --max-small-font: initial;
+  @media (width > 768px) {
+    --max-small-font: 3vh;
+  }
+}
+
+.navmenu::before,
+.navmenu__entry.is-selected::before,
+.navmenu__entry:hover::before,
+.navmenu__entry:active::before {
+  content: "";
+  position: absolute;
+  width: 0.25rem;
+  background-color: var(--border-color);
+}
+
+.navmenu::before {
+  top: -0.5rem;
+  left: -0.25rem;
+  bottom: -0.5rem;
+}
+
+.navmenu__entry.is-selected::before,
+.navmenu__entry:hover::before,
+.navmenu__entry:active::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.75rem;
+  opacity: 0.5;
+}
+
+body.dark {
+  .navmenu__entry:hover::before,
+  .navmenu__entry:active::before {
+    opacity: 1;
+  }
+
+  .navmenu__entry.is-selected::before {
+    opacity: 0;
+  }
+}
+
+.navmenu__entry {
+  text-decoration: none;
+  color: var(--text-color);
+  display: block;
+  padding: 0 1.25rem 0 3.5rem;
+  line-height: 2;
+  margin-left: -1rem;
+  position: relative;
+
+  clip-path: polygon(0 0, calc(100% - 0.5rem) 0, 100% 50%, calc(100% - 0.5rem) 100%, 0 100%);
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    z-index: 1;
+    transform: scale(0);
+
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--nav-selected-text-color);
+    left: 0.5rem;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+  &:hover {
+    background-color: var(--nav-hover);
+  }
+
+  &:active {
+    background-color: var(--nav-selected);
+  }
+
+  &.is-selected {
+    background-color: var(--nav-selected);
+    color: var(--nav-selected-text-color);
+
+    &::after {
+      transform: scale(1);
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    span {
+      /* span is just there to show the outline since the parent a is clipped to a shape */
+      outline: solid 2px black;
+    }
+  }
+
+  & span {
+    /* span cannot receive clicks or it blocks focus of the paren anchor */
+    pointer-events: none;
+  }
+
+  font-size: min(0.9375rem, var(--max-small-font));
+}
+
+.navmenu__entry--group {
+  padding-left: 2rem;
+  font-size: min(1rem, var(--max-small-font));
+}
+
+.navunderlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: var(--z-navunderlay);
+  display: none;
+
+  .nav-open & {
+    display: block;
+  }
+
+  @media (width > 768px) {
+    &,
+    .nav-open & {
+      display: none;
+    }
+  }
+}

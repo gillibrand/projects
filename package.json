@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite --host",
+    "start": "npm run dev",
+    "build": "vite build",
+    "preview": "vite preview --host --mode preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "course-clear": "^0.0.10",
+    "vite": "^5.4.10"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.80.6",
+    "vite-plugin-minify": "^2.1.0"
+  }
+}
